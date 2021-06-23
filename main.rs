@@ -132,7 +132,7 @@ fn main() {
 
     // Change the following code to create 2 threads that run concurrently and each of which uses map_data() function to process one of the two partitions
     let xs2 = xs.clone();
-
+    // code for creating and waiting for threads is from code in class example on rust threads
     // create 2 threads
     let t1 = thread::spawn(move || map_data(&xs[0]));
     let t2 = thread::spawn(move || map_data(&xs2[1]));
